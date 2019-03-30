@@ -1,0 +1,24 @@
+{
+  "name": "projectIPL",
+  "version": "1.0.0",
+  "description": "",
+  "main": "csvToJson.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gopalvenu113/ProjectIPL.git"
+  },
+  "keywords": [],
+  "author": "Venugopal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gopalvenu113/ProjectIPL/issues"
+  },
+  "homepage": "https://github.com/gopalvenu113/ProjectIPL#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
