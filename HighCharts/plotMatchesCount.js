@@ -1,4 +1,7 @@
-fetch('../Json files/matchesTotal.json').then(res => res.json()).then(json => plot(json));
+fetch('../Json files/matchesTotal.json').then(res => res.json()).then(json => {
+    let x=formatData(json);
+    plot(x);
+})
 
 function formatData(jsonData){
     let xData = Object.keys(jsonData);
@@ -46,7 +49,7 @@ function plot(json){
             {
                 "name": "Total Matches",
                 "colorByPoint": true,
-                "data": formatData(json)
+                "data": json
             }
         ] 
     })

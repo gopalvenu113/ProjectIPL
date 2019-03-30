@@ -1,4 +1,4 @@
-fetch('../Json files/extraRuns.json').then(res => res.json()).then(json => plot(json));
+fetch('../Json files/economicBowlers.json').then(res => res.json()).then(json => plot(json));
 
 function formatData(jsonData){
     let xData = Object.keys(jsonData);
@@ -18,14 +18,14 @@ function plot(json){
             type: 'column'
         },
         title: {
-            text: 'IPL Season 2016 : ExtraRuns Conceived'
+            text: 'IPL Season 2016 : Top Economical Bowlers'
         },
         xAxis: {
             type: 'category'
         },
         yAxis: {
             title: {
-                text: 'Total Extras'
+                text: 'Economy'
             }
         },
         legend: {
@@ -44,7 +44,7 @@ function plot(json){
 
         "series": [
             {
-                "name": "Total Extras",
+                "name": "Top Economical Bowlers",
                 "colorByPoint": true,
                 "data": formatData(json)
             }
