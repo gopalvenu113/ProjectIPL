@@ -13,12 +13,12 @@ function formatData(jsonData){
 
 function plot(json){
     // Create the chart
-    Highcharts.chart('container1', {
+    Highcharts.chart('container4', {
         chart: {
             type: 'column'
         },
         title: {
-            text: 'IPL Season 2016 : Top Economical Bowlers'
+            text: 'IPL Season 2015 : Top Economical Bowlers'
         },
         xAxis: {
             type: 'category'

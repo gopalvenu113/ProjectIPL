@@ -45,7 +45,7 @@ function formattedData(json){
 }
 
 function plot(json){
-    Highcharts.chart('container', {
+    Highcharts.chart('container2', {
         chart: {
             type: 'bar'
         },

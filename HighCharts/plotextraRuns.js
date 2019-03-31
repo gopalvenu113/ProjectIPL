@@ -13,7 +13,7 @@ function formatData(jsonData){
 
 function plot(json){
     // Create the chart
-    Highcharts.chart('container1', {
+    Highcharts.chart('container3', {
         chart: {
             type: 'column'
         },
