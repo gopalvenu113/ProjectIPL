@@ -1,0 +1,38 @@
+body {
+    overflow-x: hidden;
+}
+
+.main {
+    height: 800px;
+    margin-top: -20px;
+    background: url("../ipl1.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.main .container {
+    padding-top: 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-top:317px;
+    color: gray;
+}
+
+.btn-main {
+    background-color: #333;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: 1.3px;
+    padding: 16px 40px;
+    text-decoration: none;
+}
+.btn-main:hover {
+    text-decoration: none;
+    background-color: #808080;
+    color: #fff;
+}

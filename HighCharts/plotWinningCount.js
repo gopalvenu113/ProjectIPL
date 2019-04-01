@@ -1,6 +1,6 @@
 fetch('../Json files/winningCount.json').then(res => res.json()).then(json => {
     let x=formattedData(json);
-    plot(x);
+    plot2(x);
 })
 
 function formattedData(json){
@@ -44,7 +44,7 @@ function formattedData(json){
     },[])
 }
 
-function plot(json){
+function plot2(json){
     Highcharts.chart('container2', {
         chart: {
             type: 'bar'

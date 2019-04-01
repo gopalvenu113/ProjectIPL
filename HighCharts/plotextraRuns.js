@@ -1,6 +1,7 @@
-fetch('../Json files/extraRuns.json').then(res => res.json()).then(json => plot(json));
+fetch('../Json files/extraRuns.json').then(res => res.json()).then(json => columnChartForExtraRuns(json));
 
-function formatData(jsonData){
+//function to format data for plotting
+function formatData2(jsonData){
     let xData = Object.keys(jsonData);
     return xData.reduce((accumulator, keys) => {
         var obj ={};
@@ -11,7 +12,8 @@ function formatData(jsonData){
     },[])
 }
 
-function plot(json){
+//function for highChart column plots
+function columnChartForExtraRuns(json){
     // Create the chart
     Highcharts.chart('container3', {
         chart: {
@@ -46,7 +48,7 @@ function plot(json){
             {
                 "name": "Total Extras",
                 "colorByPoint": true,
-                "data": formatData(json)
+                "data": formatData2(json)
             }
         ] 
     })

@@ -1,6 +1,7 @@
-fetch('../Json files/economicBowlers.json').then(res => res.json()).then(json => plot(json));
+fetch('../Json files/economicBowlers.json').then(res => res.json()).then(json => plot4(json));
 
-function formatData(jsonData){
+//Formatting Data for plotting
+function formatData4(jsonData){
     let xData = Object.keys(jsonData);
     return xData.reduce((accumulator, keys) => {
         var obj ={};
@@ -11,7 +12,8 @@ function formatData(jsonData){
     },[])
 }
 
-function plot(json){
+//HighChart Column chart javascript 
+function plot4(json){
     // Create the chart
     Highcharts.chart('container4', {
         chart: {
@@ -46,7 +48,7 @@ function plot(json){
             {
                 "name": "Top Economical Bowlers",
                 "colorByPoint": true,
-                "data": formatData(json)
+                "data": formatData4(json)
             }
         ] 
     })

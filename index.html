@@ -1,37 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <style>
+                #image {
+                    background-image:url("ipl.jpg");
+                    background-size:cover;
+                }
+                </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>IPL Project</title>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <!-- HIGHCHARTS -->
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/modules/data.js"></script>
-        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
-
-    <!-- HIGHCHARTS -->
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
     
 
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    
+</head>
+
 <body>
-  
-<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>    
-<script src="HighCharts/plotMatchesCount.js"></script> 
-<hr><hr><hr>
 
-<div id="container2" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
-<script src="Highcharts/plotWinningCount.js"></script>
-<hr><hr><hr>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	    <div class="container">
+	        <div class="navbar-header">
+		        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav1">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+		        </button>
+		        <a class="navbar-brand" href="/">IPL DATA ANALYSIS</a>
+	        </div>
+            <div class="collapse navbar-collapse" id="nav1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="#matchCount">Match Count</a></li>
+                    <li><a href="#WinningCount">Winning Count</a></li>
+                    <li><a href="#ExtraRuns">Extra Runs</a></li>
+                    <li><a href="#BowlerEconomy">Economical Bowlers</a></li>
+                </ul>
+          </div>
+	    </div>
+    </nav>
+    <div class="main">
+        <div class="container">
+            <div class="intro" id="about">
+                <a class="btn-main" href="#matchCount">IPL DATA ANALYSIS 2008-2017</a>
+            </div>
+        </div>
+    </div>
+    
+</div>
 
-<div id="container3" style="min-width: 310px; height: 400px; margin: 0 auto"></div> 
-<script src="Highcharts/plotextraRuns.js"></script> 
-<hr><hr><hr>
+<div id="matchCount" class="container-fluid" style="height: 600px; background-color: #f7f7f7f7">
+    <div class="row">
+        <div class="col-lg-3">
+            <h2 style="color: black; text-align: left; margin-top:50%">The chart shows the Total number of Matches Played in each Season</h2>
+        </div>
+        <div class="col-lg-9">
+            <div id="container1" style="min-width: 310px; height: 400px; margin-top:100px"></div>
+        </div>
+    </div>
+</div>  
 
-<div id="container4" style="min-width: 310px; height: 400px; margin: 0 auto"></div>    
-<script src="Highcharts/plotBowlerEconomy.js"></script> 
+<div id="ExtraRuns" class="container-fluid" style="height:600px;background-color: #b4afaff4">
+        <div class="row">
+            <div class="col-lg-3">
+                    <h2 style="color: black; text-align: left; margin-top:50%">The chart shows the total Extra runs conceived by each Team in 2016</h2>
+            </div>
+            <div class="col-lg-9">
+                <div id="container3" style="min-width: 310px; height: 400px; margin-top:100px"></div> 
+            </div>
+        </div>
+</div> 
+
+<div id="BowlerEconomy" class="container-fluid" style="height:600px; background-color:#f2f7cbf7">
+        <div class="row">
+            <div class="col-lg-9">
+                <div id="container4" style="min-width: 310px; height: 400px; margin-top:100px"></div>
+            </div>
+            <div class="col-lg-3">
+                    <h2 style="color: black; text-align: left; margin-top:50%">The chart shows Top 20 Economical Bowlers in 2015</h2>
+            </div>
+        </div>
+</div>  
+
+<div id ="WinningCount" class="container-fluid" style="height:800px; background-color:rgb(196, 195, 193)">
+        <div class="row">
+            <div class="col-lg-9">
+                <div id="container2" style="min-width: 310px; height: 600px; margin-top:100px;"></div>
+            </div>
+            <div class="col-lg-2">
+                    <h2 style="color: black; text-align: left; margin-top:50%">The chart shows the Total number of Matches won by each Team in all Season</h2>
+            </div>
+        </div>
+</div>  
+<script>
+        window.onscroll = function() {myFunction()};
+        
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+</script>
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- HIGHCHARTS -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+<!-- PlotCHARTS -->
+    <script src="HighCharts/plotMatchesCount.js"></script> 
+    <script src="Highcharts/plotWinningCount.js"></script>
+    <script src="Highcharts/plotextraRuns.js"></script> 
+    <script src="Highcharts/plotBowlerEconomy.js"></script> 
 </html>

@@ -1,9 +1,9 @@
 fetch('../Json files/matchesTotal.json').then(res => res.json()).then(json => {
-    let x=formatData(json);
-    plot(x);
+    let x=formatData1(json);
+    plot1(x);
 })
 
-function formatData(jsonData){
+function formatData1(jsonData){
     let xData = Object.keys(jsonData);
     return xData.reduce((accumulator, keys) => {
         var obj ={};
@@ -14,9 +14,9 @@ function formatData(jsonData){
     },[])
 }
 
-function plot(json){
+function plot1(json){
     // Create the chart
-    Highcharts.chart('container', {
+    Highcharts.chart('container1', {
         chart: {
             type: 'column'
         },
