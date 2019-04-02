@@ -4,20 +4,20 @@ const fs = require('fs');
 
 function winningCount(matchData){
     return matchData.reduce((accumulator,matches) => {
-        if(accumulator.hasOwnProperty(matches['season'])){
-            if(accumulator[matches['season']].hasOwnProperty(matches['winner'])){
-                accumulator[matches['season']][matches['winner']]+=1;
+        if(accumulator.hasOwnProperty(matches['winner'])){
+            if(accumulator[matches['winner']].hasOwnProperty(matches['season'])){
+                accumulator[matches['winner']][matches['season']]+=1;
             }
             else{
-                if(matches['winner']!=0){
-                    accumulator[matches['season']][matches['winner']] = 1;
+                if(matches['winner']!=""){
+                    accumulator[matches['winner']][matches['season']] = 1;
                 }
             }
             return accumulator;
         }else{
-            accumulator[matches['season']] = {};
-            if(matches['winner']!=0){
-                accumulator[matches['season']][matches['winner']] = 1;
+            if(matches['winner']!=""){
+                accumulator[matches['winner']] = {};
+                accumulator[matches['winner']][matches['season']] = 1;
             }
             return accumulator;
         }
